@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nested_listviews/slivers/list_from_slivers.dart';
 
 void main() => runApp(MyApp());
 
@@ -65,6 +66,10 @@ class Menu extends StatelessWidget {
         MaterialButton(
           onPressed: () => showWidget(context, (context) => FlattenedList()),
           child: Text('Flattened List'),
+        ),
+        MaterialButton(
+          onPressed: () => showWidget(context, (context) => ListFromSlivers()),
+          child: Text('Multiple SliverLists'),
         ),
       ],
       crossAxisAlignment: CrossAxisAlignment.start,
